@@ -1,0 +1,470 @@
+:root {
+    --green: #1B4332;
+    --green-light: #2D6A4F;
+    --gold: #D4A359;
+    --gold-light: #E2B46B;
+    --cream: #FAF8F5;
+    --sand: #F2EFE9;
+    --text: #262925;
+    --text-soft: #4A4F48;
+    --muted: #555B54;
+    --border: #E6E2D8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--text);
+    line-height: 1.65;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+.logo {
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+header {
+    background-color: var(--green);
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--gold);
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+header img {
+    width: 68px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.logo {
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+nav ul li a {
+    color: #E8E4DC;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+}
+
+main {
+    padding: 70px 8%;
+}
+
+main h1 {
+    text-transform: uppercase;
+    font-size: 52px;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.tagline {
+    color: #F3C677;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #F4F1EA;
+    margin-bottom: 28px;
+    max-width: 650px;
+}
+
+.hero .tagline {
+    color: #F3C677;
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.link-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--gold);
+    color: #1A211B;
+    font-size: 16px;
+    padding: 13px 30px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.link-button:hover {
+    background-color: var(--gold-light);
+}
+
+.hero {
+    margin-bottom: 40px;
+}
+
+footer {
+    background-color: var(--green);
+    color: #E8E4DC;
+    padding: 32px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    border-top: 3px solid var(--gold);
+}
+
+footer p {
+    font-size: 15px;
+}
+
+.join-link {
+    display: inline-block;
+    padding: 11px 26px;
+    color: #1A211B;
+    background-color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.join-link:hover {
+    background-color: var(--gold-light);
+}
+
+
+/* HOME PAGE */
+
+
+#home-main {
+    padding: 0;
+    background-color: var(--cream);
+}
+
+#home-main .hero {
+    background:
+        linear-gradient(rgba(18, 38, 28, 0.58),
+            rgba(18, 38, 28, 0.76)),
+        url("images/klcc_night.jpg") center/cover no-repeat;
+    padding: 110px 8%;
+    margin-bottom: 0;
+}
+
+#home-main h2 {
+    color: var(--green);
+    font-size: 32px;
+    margin-bottom: 14px;
+}
+
+.welcome {
+    background-color: var(--sand);
+    padding: 65px 8%;
+    margin-bottom: 0;
+    text-align: center;
+    border-bottom: 1px solid #E4DFD5;
+}
+
+.welcome p {
+    color: var(--text-soft);
+    font-size: 18px;
+    max-width: 780px;
+    margin: 20px auto 0;
+}
+
+.content-cards {
+    padding: 70px 8%;
+    margin-bottom: 0;
+}
+
+.content-cards h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+
+.content-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    background-color: #FFFFFF;
+    color: var(--text);
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    text-align: left;
+}
+
+.content-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.content-card h3 {
+    color: var(--green);
+    font-size: 21px;
+    margin-top: 4px;
+}
+
+.content-card p {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.content-card a {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 9px 20px;
+    color: #FFFFFF;
+    background-color: var(--green);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.content-card a:hover {
+    background-color: var(--green-light);
+}
+
+
+/* ABOUT PAGE */
+
+
+#about-main {
+    padding: 0;
+    background-color: var(--cream);
+}
+
+#about-main .hero {
+    background:
+        linear-gradient(rgba(18, 38, 28, 0.58),
+            rgba(18, 38, 28, 0.76)),
+        url("images/aboutusbanner.jpeg") center/cover no-repeat;
+    padding: 100px 8%;
+    margin-bottom: 0;
+}
+
+.club-info {
+    background-color: var(--sand);
+    color: var(--text);
+    padding: 65px 8%;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    border-bottom: 1px solid #E4DFD5;
+}
+
+.club-info h2 {
+    color: var(--green);
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+.club-info p {
+    color: var(--text-soft);
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.mission-vision {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 20px;
+}
+
+.mission-vision div {
+    background-color: #FFFFFF;
+    padding: 28px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--gold);
+}
+
+.mission-vision h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.our-objectives {
+    padding: 70px 8%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.our-objectives h2 {
+    color: var(--green);
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.objective-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    background-color: #FFFFFF;
+    color: var(--text);
+    padding: 26px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    transition: transform 0.2s ease;
+}
+
+.objective-card:hover {
+    transform: translateY(-4px);
+}
+
+.objective-card img {
+    width: 48px;
+    height: 48px;
+    padding: 10px;
+    background-color: var(--sand);
+    border: 1px solid var(--gold);
+    border-radius: 10px;
+}
+
+.objective-card h3 {
+    color: var(--green);
+    font-size: 20px;
+    margin-top: 4px;
+}
+
+.objective-card p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.team {
+    background-color: var(--sand);
+    padding: 70px 8%;
+    margin-bottom: 0;
+    border-top: 1px solid #E4DFD5;
+}
+
+.team h2 {
+    color: var(--green);
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.team-intro {
+    text-align: center;
+    color: var(--text-soft);
+    font-size: 17px;
+    max-width: 720px;
+    margin: 0 auto 36px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+    background-color: #FFFFFF;
+    padding: 24px 18px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--gold);
+}
+
+.member-card img {
+    width: 104px;
+    height: 104px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--gold);
+    margin-bottom: 8px;
+}
+
+.member-card h3 {
+    color: var(--green);
+    font-size: 19px;
+}
+
+.student-id {
+    font-size: 13px;
+    font-weight: 700;
+    color: #8A6420;
+}
+
+.member-card .role {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--green-light);
+}
+
+.member-card p {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--muted);
+}
